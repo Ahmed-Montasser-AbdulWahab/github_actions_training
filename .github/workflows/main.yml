@@ -1,0 +1,17 @@
+name: First Workflow
+on:
+  push:
+    branches:
+      -main
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First Step
+        run: echo "Welcome to first Workflow"
+
+      - name: Second Step
+        uses: actions/checkout@v6.0.1
+
+      - name: Third Step
+        run: ls -la
